@@ -1,4 +1,3 @@
-
 using api.Dtos;
 using AutoMapper;
 using Core.Entities;
@@ -8,9 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProductsController : Controller
+    public class ProductsController : BaseApiController
     {
         private readonly IGenericRepository<Product> _productsRepo;
         private readonly IGenericRepository<ProductBrand> _productBrandRepo;
