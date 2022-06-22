@@ -33,7 +33,8 @@ namespace Infrastructure.Data
             return await ApplySpecification(spec).ToListAsync();
         }
 
-        private IQueryable<T> ApplySpecification(ISpecification<T> spec){
+        private IQueryable<T> ApplySpecification(ISpecification<T> spec)
+        {
             return SpecificationEvaluator<T>.GetQuery(_db.Set<T>().AsQueryable(), spec);
         }
     }

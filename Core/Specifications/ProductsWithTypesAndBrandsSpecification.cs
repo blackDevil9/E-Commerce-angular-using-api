@@ -21,4 +21,4 @@ namespace Core.Specifications
             AddInclude(x => x.ProductBrand);
         }
     }
-}
+} 
