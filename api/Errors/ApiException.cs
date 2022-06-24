@@ -1,6 +1,4 @@
-﻿using api.Errors;
-
-namespace api
+﻿namespace api.Errors
 {
     public class ApiException : ApiResponse
     {
