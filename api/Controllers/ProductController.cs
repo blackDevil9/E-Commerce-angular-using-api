@@ -24,7 +24,7 @@ namespace api.Controllers
             _productsRepo = productsRepo;
             _productBrandRepo = productBrandRepo;
             _productTypeRepo = productTypeRepo;
-            _mapper = mapper;
+            _mapper = mapper; 
         }
 
         [HttpGet]
@@ -50,7 +50,7 @@ namespace api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id)
-        {
+         {
             var spec = new ProductsWithTypesAndBrandsSpecification(id);
 
             var product =  await _productsRepo.GetEntityWithSpec(spec);
