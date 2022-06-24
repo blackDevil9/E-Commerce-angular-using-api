@@ -71,7 +71,7 @@ app.UseStatusCodePagesWithReExecute("/errors/{0}");
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseStaticFiles();
-app.UseCors("CorPolicy");
+app.UseCors("CorsPolicy");
 
 app.UseAuthorization();
 
