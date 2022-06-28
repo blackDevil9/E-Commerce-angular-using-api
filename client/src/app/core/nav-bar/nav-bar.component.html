@@ -1,11 +1,11 @@
 <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
 
-  <img src="/assets/images/logo.png" class="logo" alt="logo">
+  <img src="/assets/images/logo.png" class="logo" alt="logo" routerLink="/">
 
   <nav class="my-2 my-md-2 mr-md-3 text-uppercase nt">
-    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Home</a>
-    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Shop</a>
-    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Contect</a>
+    <a class="me-3 py-2"[routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a class="me-3 py-2" routerLink="/shop" routerLinkActive="active">Shop</a>
+    <a class="me-3 py-2" router>Contect</a>
   </nav>
   <div class="d-flex align-item-center">
     <a class="position-relative">
