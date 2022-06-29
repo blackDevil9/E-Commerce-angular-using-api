@@ -6,25 +6,27 @@ import { ShopService } from '../shop.service';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.scss']
+  styleUrls: ['./product-details.component.scss'],
 })
 export class ProductDetailsComponent implements OnInit {
-
   product: IProduct = Object.assign({});
 
-  constructor(private service: ShopService, private route: ActivatedRoute) { }
+  constructor(private service: ShopService, 
+    private route: ActivatedRoute)
+    {}
 
   ngOnInit(): void {
     this.loadProduct();
   }
 
-  loadProduct(){
+  loadProduct() {
     this.service.getProduct(this.route.snapshot.params['id']).subscribe(
-      product => {
+      (product) => {
         this.product = product;
-      }, error => {
+      },
+      (error) => {
         console.log(error);
       }
-    )
+    );
   }
 }
