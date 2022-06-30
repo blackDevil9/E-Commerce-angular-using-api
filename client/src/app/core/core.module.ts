@@ -7,7 +7,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ServerErrorComponent } from './server-error/server-error.component';
 import { ToastrModule } from 'ngx-toastr';
 import { SectionHeaderComponent } from './section-header/section-header.component';
-
+import {Ng8BreadcrumbModule} from 'ng8-breadcrumb';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,10 @@ import { SectionHeaderComponent } from './section-header/section-header.componen
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
-    })
+    }),
+    Ng8BreadcrumbModule.forRoot({
+      prefix: 'Home' // default 'false'
+  }),
   ],
   exports: [NavBarComponent, SectionHeaderComponent],
 })

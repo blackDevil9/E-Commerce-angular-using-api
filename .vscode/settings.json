@@ -27,5 +27,6 @@
         "titleBar.border": "#61dafb",
         "tab.activeBorder": "#93e6fc"
     },
-    "peacock.color": "#61dafb"
+    "peacock.color": "#61dafb",
+    "compile-hero.disable-compile-files-on-did-save-code": false
 }
